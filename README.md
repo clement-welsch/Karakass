@@ -1,2 +1,2 @@
-# Karakass
+# Karakass - develop
 Karaoke C++/OpenGL
