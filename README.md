@@ -1,0 +1,2 @@
+# Karakass
+Karaoke C++/OpenGL
