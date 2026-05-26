@@ -129,11 +129,6 @@
     <Text Include="src\ui\DebugUI.txt" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="shaders\fragment.frag" />
-    <None Include="shaders\geometry.geom" />
-    <None Include="shaders\vertex.vert" />
-  </ItemGroup>
-  <ItemGroup>
     <ClCompile Include="api\vendor\stb_image.cpp" />
     <ClCompile Include="Application.cpp" />
     <ClCompile Include="src\AudioPlayer.cpp" />
@@ -157,6 +152,10 @@
     <ClInclude Include="src\VertexArray.h" />
     <ClInclude Include="src\VertexBuffer.h" />
     <ClInclude Include="src\VertexBufferLayout.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\shader\fragment.frag" />
+    <None Include="res\shader\vertex.vert" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
