@@ -34,9 +34,6 @@ void VertexArray::AddBuffer(const VertexBuffer& _vb, const VertexBufferLayout& l
 			(const void*)offset
 		));
 
-		/*glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 5 * sizeof(float), (void*)0);
-		glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 5 * sizeof(float), (void*)(3 * sizeof(float)));*/
-
 		offset += element.m_count * VertexBufferElement::GetSizeOfType(element.m_type);
 	}
 }
