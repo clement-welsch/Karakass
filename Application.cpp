@@ -106,8 +106,6 @@ int main(void)
 		//Texture
 		Texture texture(s_avatarFilePath);
 		texture.Bind(0);
-		//need to match the texture bind arg passed
-		//shaderBasic.SetUniform1i("u_texture", 0);
 
 		Renderer renderer;
 
@@ -115,21 +113,6 @@ int main(void)
 
 		while (!glfwWindowShouldClose(window))
 		{
-			/*shaderBasic.Bind();
-			shaderBasic.SetUniform1f("u_time", time);
-			//shaderBasic.SetUniform2f("u_spectrum", 1.0f, 0.0f);
-			shaderBasic.Unbind();
-			// Clear the screen
-			renderer.Clear();
-			renderer.Draw(va, ib, shaderBasic);
-
-			// Swap buffers
-			GLCall(glfwSwapBuffers(window));
-			GLCall(glfwPollEvents());
-
-			time = glfwGetTime();*/
-
-			//----------
 
 			renderer.Clear();
 			renderer.Draw(va, ib, shaderBasic);
@@ -138,7 +121,6 @@ int main(void)
 
 			shaderBasic.Bind();
 			shaderBasic.SetUniform1f("u_time", timeValue);
-			//shaderBasic.SetUniform2f("u_spectrum", 1.0f, 0.0f);
 			shaderBasic.Unbind();
 
 			// Clear the screen
