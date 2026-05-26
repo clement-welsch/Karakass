@@ -17,14 +17,24 @@ void VertexArray::AddBuffer(const VertexBuffer& _vb, const VertexBufferLayout& l
 	Bind();
 	_vb.Bind();
 	const std::vector<VertexBufferElement>& elements = layout.GetElements();
-	unsigned int offest = 0;
+	unsigned int offset = 0;
 
 	for (unsigned int i = 0; i < elements.size(); i++)
 	{
-		const VertexBufferElement& element = elements[i];
-		GLCall(glEnableVertexAttribArray(0));
-		GLCall(glVertexAttribPointer(i, element.m_count, element.m_type, element.m_normalized, layout.GetStride(), (const void*) offest));
-		offest += element.m_count * VertexBufferElement::GetSizeOfType(element.m_type);
+		auto& element = elements[i];
+
+		GLCall(glEnableVertexAttribArray(i));
+
+		GLCall(glVertexAttribPointer(
+			i,
+			element.m_count,
+			element.m_type,
+			element.m_normalized,
+			layout.GetStride(),
+			(const void*)offset
+		));
+
+		offset += element.m_count * VertexBufferElement::GetSizeOfType(element.m_type);
 	}
 }
 
