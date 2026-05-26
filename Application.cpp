@@ -70,14 +70,28 @@ int main(void)
 	glBindVertexArray(VertexArrayID);
 
 	{
+		float vertices[] =
+		{
+			// position          // uv
+
+			-1.f, -1.f, 0.f,     0.f, 0.f,
+			 1.f, -1.f, 0.f,     1.f, 0.f,
+			 1.f,  1.f, 0.f,     1.f, 1.f,
+			-1.f,  1.f, 0.f,     0.f, 1.f
+		};
+
+		unsigned int indices[] =
+		{
+			0, 1, 2,
+			2, 3, 0
+		};
+
 		VertexArray va;
-		//VertexBuffer vb(&shape.m_listVertex[0], shape.m_listVertex.size() * sizeof(float));
-		VertexBuffer vb(nullptr, 0);
-		//IndexBuffer ib(&shape.m_listIndex[0], shape.m_listIndex.size());
-        IndexBuffer ib(nullptr, 0);
+		VertexBuffer vb(vertices, sizeof(vertices));
+		IndexBuffer ib(indices, 6);
 
 		VertexBufferLayout layout;
-		layout.Push<float>(2);
+		layout.Push<float>(3);
 		layout.Push<float>(2);
 		va.AddBuffer(vb, layout);
 
@@ -86,19 +100,47 @@ int main(void)
 
 		//Shader setup
 		Shader shaderBasic;
-		shaderBasic.SetUniformMat4f("u_mvp", proj);
-		shaderBasic.SetUniform4f("u_color", 1.0f, 0.0f, 0.0f, 1.0f);
+		//shaderBasic.SetUniformMat4f("u_mvp", proj);
+		
 
 		//Texture
 		Texture texture(s_avatarFilePath);
 		texture.Bind(0);
 		//need to match the texture bind arg passed
-		shaderBasic.SetUniform1i("u_texture", 0);
+		//shaderBasic.SetUniform1i("u_texture", 0);
 
 		Renderer renderer;
 
+		double time = glfwGetTime();
+
 		while (!glfwWindowShouldClose(window))
 		{
+			/*shaderBasic.Bind();
+			shaderBasic.SetUniform1f("u_time", time);
+			//shaderBasic.SetUniform2f("u_spectrum", 1.0f, 0.0f);
+			shaderBasic.Unbind();
+			// Clear the screen
+			renderer.Clear();
+			renderer.Draw(va, ib, shaderBasic);
+
+			// Swap buffers
+			GLCall(glfwSwapBuffers(window));
+			GLCall(glfwPollEvents());
+
+			time = glfwGetTime();*/
+
+			//----------
+
+			renderer.Clear();
+			renderer.Draw(va, ib, shaderBasic);
+
+			float timeValue = (float)glfwGetTime();
+
+			shaderBasic.Bind();
+			shaderBasic.SetUniform1f("u_time", timeValue);
+			//shaderBasic.SetUniform2f("u_spectrum", 1.0f, 0.0f);
+			shaderBasic.Unbind();
+
 			// Clear the screen
 			renderer.Clear();
 			renderer.Draw(va, ib, shaderBasic);
