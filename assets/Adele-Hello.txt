@@ -1,0 +1,50 @@
+1|0|11960|Hello, it's me
+2|11960|18010|I was wondering if after all these years you'd like to meet
+3|18010|23579|To go over everything
+4|23579|30620|They say that time's supposed to heal ya, but I ain't done much healing
+5|30620|36219|Hello? Can you hear me
+6|36219|42039|I'm in California dreaming about who we used to be
+7|42039|48479|When we were younger and free
+8|48479|54060|I've forgotten how it felt before the world fell at our feet
+9|54060|67319|There's such a difference between us and a million miles
+10|67319|73040|Hello from the other side
+11|73040|78500|I must've called a thousand times
+12|78500|84219|To tell you I'm sorry for everything that I've done
+13|84219|91579|But when I call, you never seem to be home
+14|91579|97280|Hello from the outside
+15|97280|102739|At least I can say that I've tried
+16|102739|108500|To tell you I'm sorry for breaking your heart
+17|108500|110280|But it don't matter
+18|110280|121780|It clearly doesn't tear you apart anymore
+19|121780|124620|Hello
+20|124620|127319|How are you
+21|127319|132259|It's so typical of me to talk about myself
+22|132259|133840|I'm sorry
+23|133840|139460|I hope that you're well
+24|139460|145599|Did you ever make it out of that town where nothing ever happened
+25|145599|158039|It's no secret that the both of us are running out of time
+26|158039|164240|So hello from the other side
+27|164240|169639|I must've called a thousand times
+28|169639|175340|To tell you I'm sorry for everything that I've done
+29|175340|182780|But when I call, you never seem to be home
+30|182780|188500|Hello from the outside
+31|188500|193979|At least I can say that I've tried
+32|193979|199680|To tell you I'm sorry for breaking your heart
+33|199680|201919|But it don't matter
+34|201919|206969|It clearly doesn't tear you apart anymore
+35|206969|209379|Ooh
+36|209379|212520|Anymore
+37|212520|212620|Ooh
+38|212620|216479|Anymore
+39|216479|218419|Ooh
+40|218419|224699|Anymore
+41|224699|231319|Anymore
+42|231319|235979|Hello from the other side
+43|235979|242560|I must've called a thousand times
+44|242560|248280|To tell you I'm sorry for everything that I've done
+45|248280|255639|But when I call, you never seem to be home
+46|255639|261399|Hello from the outside
+47|261399|266860|At least I can say that I've tried
+48|266860|272600|To tell you I'm sorry for breaking your heart
+49|272600|274399|But it don't matter
+50|274399|277399|It clearly doesn't tear you apart anymore
